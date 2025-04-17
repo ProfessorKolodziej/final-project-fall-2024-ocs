@@ -3,55 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Original Characters Archive</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/css/style.css" />
+  <title>Explore | OC Archive</title>
+  <link rel="stylesheet" href="css/style.css" />
   <script src="js/scripts.js" defer></script>
-
-
 </head>
 <body>
-  <div class="container">
-    <header class="top-nav">
-    <img src="images/home.svg" alt="Home" class="icon">
-		<img src="images/search.svg" alt="Search" class="icon">
-    </header>
+  <header class="top-nav">
+    <a href="index.html"><img src="images/home.svg" alt="Home" class="icon" /></a>
+    <img src="images/search.svg" alt="Search" class="icon" />
+  </header>
 
-    <div class="logo-title">
-      <img src="images/logo.svg" alt="Logo" class="logo" />
-      <div class="title-stack">
-      <h1>Original</h1>
-      <h1>Characters</h1>
-      <h1>Archive</h1>
-    </div>
-    </div>
-    
+  <main class="container">
+    <section class="filters">
+      <button class="filter-tile">Daily</button>
+      <button class="filter-tile">Weekly</button>
+      <button class="filter-tile">Monthly</button>
+    </section>
 
-    <div class="button-group">
-      <button class="btn-outline">Sign In</button>
-      <button class="btn-outline">Sign Up</button>
-    </div>
-
-    <div class="tile-group">
+    <section class="card-grid">
       <div class="tile">
-		<img src="images/explore.svg" alt="Explore" />
-        <p>Explore</p>
+        <img src="images/explore.png" alt="Magicc" />
+        <p>Magicc</p>
       </div>
       <div class="tile">
-		<img src="images/surprise.svg" alt="Surprise Me" />
-        <p>Surprise Me</p>
+        <img src="images/surprise.png" alt="Afwa" />
+        <p>Afwa</p>
       </div>
-    </div>
-  </div>
-
-<!-- Firebase SDKs -->
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js"></script>
-
-<!-- Your JS -->
-<script src="src/js/auth.js" defer></script>
-
-
+      <div class="tile">
+        <img src="images/character1.png" alt="Rhyss" />
+        <p>Rhyss</p>
+      </div>
+      <div class="tile">
+        <img src="images/character2.png" alt="Fool" />
+        <p>Fool</p>
+      </div>
+      <div class="tile">
+        <img src="images/character3.png" alt="Girl 1" />
+        <p>Girl 1</p>
+      </div>
+      <div class="tile">
+        <img src="images/character4.png" alt="Girl 2" />
+        <p>Girl 2</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

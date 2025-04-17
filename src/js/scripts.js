@@ -45,3 +45,9 @@ const firebaseConfig = {
       });
   }
   
+  const surpriseBtn = document.querySelector('.tile-surprise');
+surpriseBtn.addEventListener('click', () => {
+  const pages = ['character1.html', 'character2.html', 'character3.html'];
+  const random = pages[Math.floor(Math.random() * pages.length)];
+  window.location.href = random;
+});

@@ -22,29 +22,25 @@ const firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   const auth = firebase.auth();
   
-  // Sign up function
-  function registerUser(email, password) {
-    auth.createUserWithEmailAndPassword(email, password)
-      .then(userCredential => {
-        console.log("User registered:", userCredential.user);
-        alert("Account created!");
-      })
-      .catch(error => {
-        console.error(error.message);
-        alert(error.message);
-      });
-  }
+  // Register User
+  document.addEventListener("DOMContentLoaded", () => {
+    const signupForm = document.getElementById("signup-form");
   
-  // Login function
-  function loginUser(email, password) {
-    auth.signInWithEmailAndPassword(email, password)
-      .then(userCredential => {
-        console.log("User logged in:", userCredential.user);
-        window.location.href = "explore.html";
-      })
-      .catch(error => {
-        console.error(error.message);
-        alert(error.message);
-      });
-  }
+    if (signupForm) {
+      signupForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("signup-email").value;
+        const password = document.getElementById("signup-password").value;
   
+        auth.createUserWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            console.log("Signed up:", userCredential.user);
+            alert("Signup successful! Redirecting to Explore...");
+            window.location.href = "explore.html";
+          })
+          .catch((error) => {
+            alert("Error: " + error.message);
+          });
+      });
+    }
+  });

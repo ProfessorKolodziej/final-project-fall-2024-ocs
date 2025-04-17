@@ -3,62 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Original Characters Archive</title>
+  <title>Sign Up | OC Archive</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/css/style.css" />
-  <script src="js/scripts.js" defer></script>
+  <!-- Font & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Firebase SDKs (must go first) -->
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+  <!-- Firebase SDKs (for plain HTML usage) -->
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
 
-<!-- Your Firebase logic -->
-<script src="js/auth.js" defer></script>
-
-
+  <!-- Your Firebase logic -->
+  <script src="js/auth.js" defer></script>
 </head>
 <body>
-  <div class="container">
+  <main class="container">
+
     <header class="top-nav">
-    <img src="images/home.svg" alt="Home" class="icon">
-		<img src="images/search.svg" alt="Search" class="icon">
+      <a href="index.html">
+        <img src="images/home.svg" alt="Home" class="icon" />
+      </a>
+      <!-- other nav icons -->
     </header>
 
-    <div class="logo-title">
-      <img src="images/logo.svg" alt="Logo" class="logo" />
-      <div class="title-stack">
-      <h1>Original</h1>
-      <h1>Characters</h1>
-      <h1>Archive</h1>
+    <div class="auth-box">
+      <h2>Create Your Account</h2>
+
+      <form id="signup-form">
+        <input type="email" id="signup-email" placeholder="Email" required />
+        <input type="password" id="signup-password" placeholder="Password" required />
+        <button type="submit" class="btn-outline">Sign Up</button>
+      </form>
+
+      <p>Already have an account? <a href="login.html">Log in here</a></p>
     </div>
-    </div>
-    
-
-    <div class="button-group">
-      <button class="btn-outline">Sign In</button>
-      <button class="btn-outline">Sign Up</button>
-    </div>
-
-    <div class="tile-group">
-      <div class="tile">
-		<img src="images/explore.svg" alt="Explore" />
-        <p>Explore</p>
-      </div>
-      <div class="tile">
-		<img src="images/surprise.svg" alt="Surprise Me" />
-        <p>Surprise Me</p>
-      </div>
-    </div>
-  </div>
-
-<!-- Firebase SDKs -->
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js"></script>
-
-<!-- Your JS -->
-<script src="src/js/auth.js" defer></script>
-
-
+  </main>
 </body>
 </html>
