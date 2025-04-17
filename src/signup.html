@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="/src/css/style.css" />
   <script src="js/scripts.js" defer></script>
 
+  <!-- Firebase SDKs (must go first) -->
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
+
+<!-- Your Firebase logic -->
+<script src="js/auth.js" defer></script>
+
 
 </head>
 <body>
@@ -29,9 +36,8 @@
     
 
     <div class="button-group">
-      <a href="login.html" class="btn-outline">Sign In</a>
-      <a href="signup.html" class="btn-outline">Sign Up</a>
-
+      <button class="btn-outline">Sign In</button>
+      <button class="btn-outline">Sign Up</button>
     </div>
 
     <div class="tile-group">
@@ -46,6 +52,12 @@
     </div>
   </div>
 
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js"></script>
+
+<!-- Your JS -->
+<script src="src/js/auth.js" defer></script>
 
 
 </body>

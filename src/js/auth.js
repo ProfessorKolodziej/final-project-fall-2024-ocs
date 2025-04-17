@@ -8,6 +8,9 @@
 
 // src/js/auth.js
 
+console.log("auth.js loaded");
+
+
 // 🔧 Replace with your Firebase config
 const firebaseConfig = {
     apiKey: "YOUR_API_KEY",
