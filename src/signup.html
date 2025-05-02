@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign Up | OC Archive</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Sign Up | OC Archive</title>
 
-  <!-- Font & Styles -->
-  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+	<!-- Font & Styles -->
+	<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.css" />
 
-  <!-- Firebase SDKs (for plain HTML usage) -->
-  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
-
-  <!-- Your Firebase logic -->
-  <script src="js/auth.js" defer></script>
+	<!-- Your Firebase logic -->
+	<script type="module" src="js/auth.js" defer></script>
 </head>
+
 <body>
-  <main class="container">
+	<main class="container">
 
-    <header class="top-nav">
-      <a href="index.html">
-        <img src="images/home.svg" alt="Home" class="icon" />
-      </a>
-      <!-- other nav icons -->
-    </header>
+		<header class="top-nav">
+			<a href="index.html">
+				<img src="images/home.svg" alt="Home" class="icon" />
+			</a>
+			<!-- other nav icons -->
+		</header>
 
-    <div class="auth-box">
-      <h2>Create Your Account</h2>
+		<div class="auth-box">
+			<h2>Create Your Account</h2>
 
-      <form id="signup-form">
-        <input type="email" id="signup-email" placeholder="Email" required />
-        <input type="password" id="signup-password" placeholder="Password" required />
-        <button type="submit" class="btn-outline">Sign Up</button>
-      </form>
+			<form id="signup-form">
+				<input type="email" id="signup-email" placeholder="Email" required />
+				<input type="password" id="signup-password" placeholder="Password" required />
+				<button id="js-signup" type="submit" class="btn-outline">Sign Up</button>
+			</form>
 
-      <p>Already have an account? <a href="login.html">Log in here</a></p>
-    </div>
-  </main>
+			<p>Already have an account? <a href="login.html">Log in here</a></p>
+		</div>
+	</main>
 </body>
+
 </html>
