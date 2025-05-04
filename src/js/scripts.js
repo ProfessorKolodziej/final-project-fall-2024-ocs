@@ -12,3 +12,4 @@ surpriseBtn?.addEventListener('click', () => {
 	const random = pages[Math.floor(Math.random() * pages.length)];
 	window.location.href = random;
 });
+

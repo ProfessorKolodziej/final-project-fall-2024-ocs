@@ -88,6 +88,7 @@ body {
 	margin: 20px 0 40px;
   }
   
+  
   .tile {
 	position: relative;
 	overflow: hidden;
@@ -101,7 +102,8 @@ body {
 	flex-direction: column;
 	justify-content: flex-end;
   }
-  
+
+
   .tile:hover {
 	transform: scale(1.03);
   }
@@ -147,7 +149,7 @@ body {
 	font-weight: bold;
 	font-size: 12px;
 	text-shadow: 1px 1px 3px #000;
-	background-image: url('../images/explore.svg');
+	background-image: url('../images/dice.JPG');
 	background-size: cover;
 	background-position: center;
   }
@@ -234,5 +236,20 @@ body {
 	font-weight: normal;
 	margin-top: 8px;
 	line-height: 1.4;
+  }
+  
+
+
+  /* Fix for centering homepage tiles */
+.homepage-tiles {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+	max-width: 100%;
+  }
+  
+  .homepage-tiles .tile {
+	width: 300px; /* consistent width */
   }
   
