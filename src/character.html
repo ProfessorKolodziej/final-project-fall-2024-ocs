@@ -3,56 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Original Characters Archive</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/css/style.css" />
-  <script src="js/scripts.js" defer></script>
-
-
+  <title>Character Profile</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="container">
+  <div class="top-nav">
+    <a href="index.html"><img src="images/home.svg" class="icon" alt="Home" /></a>
+    <a href="#"><img src="images/search.svg" class="icon" alt="Search" /></a>
+  </div>
 
-    <header class="top-nav">
-    <img src="images/home.svg" alt="Home" class="icon" />
-		<img src="images/search.svg" alt="Search" class="icon">
-    </header>
-
-    <div class="logo-title">
-      <img src="images/logo.svg" alt="Logo" class="logo" />
-      <div class="title-stack">
-      <h1>Original</h1>
-      <h1>Characters</h1>
-      <h1>Archive</h1>
-    </div>
-    </div>
-    
-
-    <div class="button-group">
-      <button class="btn-outline">Sign In</button>
-      <button class="btn-outline">Sign Up</button>
+  <div class="container character-profile">
+    <div class="character-header">
+      <img id="char-avatar" class="avatar" alt="Avatar" />
+      <button class="btn-outline">Edit</button>
     </div>
 
-    <div class="tile-group">
-      <div class="tile">
-		<img src="images/explore.svg" alt="Explore" />
-        <p>Explore</p>
-      </div>
-      <div class="tile">
-		<img src="images/surprise.svg" alt="Surprise Me" />
-        <p>Surprise Me</p>
+    <div class="character-art">
+      <img id="char-art" alt="Character Full Art" />
+      <div class="character-name" id="char-name"></div>
+    </div>
+
+    <div class="info-table">
+      <div class="row"><span class="label">Birthday</span><span id="char-birthday"></span></div>
+      <div class="row"><span class="label">Weight</span><span id="char-weight"></span></div>
+      <div class="row"><span class="label">Height</span><span id="char-height"></span></div>
+      <div class="row"><span class="label">Gender</span><span id="char-gender"></span></div>
+      <div class="row"><span class="label">Category</span><span id="char-category"></span></div>
+      <div class="row"><span class="label">Ability</span><span id="char-ability"></span></div>
+      <div class="row story">
+        <span class="label">Story</span>
+        <span id="char-story"></span>
       </div>
     </div>
   </div>
 
-<!-- Firebase SDKs -->
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js"></script>
+  <script>
+    const characterData = {
+      name: "Magician",
+      avatar: "images/explore.svg",
+      art: "images/comm.jpg",
+      birthday: "January 21st",
+      weight: "153lbs",
+      height: "6'1\"",
+      gender: "He/They",
+      category: "Tarot",
+      ability: "Some.",
+      story: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    };
 
-<!-- Your JS -->
-<script src="src/js/auth.js" defer></script>
-
-
+    document.getElementById("char-avatar").src = characterData.avatar;
+    document.getElementById("char-art").src = characterData.art;
+    document.getElementById("char-name").textContent = characterData.name;
+    document.getElementById("char-birthday").textContent = characterData.birthday;
+    document.getElementById("char-weight").textContent = characterData.weight;
+    document.getElementById("char-height").textContent = characterData.height;
+    document.getElementById("char-gender").textContent = characterData.gender;
+    document.getElementById("char-category").textContent = characterData.category;
+    document.getElementById("char-ability").textContent = characterData.ability;
+    document.getElementById("char-story").textContent = characterData.story;
+  </script>
 </body>
 </html>

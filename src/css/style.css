@@ -1,106 +1,68 @@
+/* ===== BASE STYLES ===== */
 body {
 	font-family: 'Inknut Antiqua', serif;
 	margin: 0;
 	background: linear-gradient(to bottom, #001a33, #002b53);
 	color: #f9f5e3;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
   }
   
-  
+  /* ===== CONTAINER ===== */
   .container {
 	width: 100%;
-	max-width: 400px;
+	max-width: 1200px;
+	margin: 0 auto;
 	padding: 20px;
+	flex: 1;
   }
   
+  /* ===== TOP NAVIGATION ===== */
   .top-nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 12px 20px;
+	padding: 16px 20px;
   }
   
   .icon {
 	width: 28px;
 	height: 28px;
 	cursor: pointer;
+	object-fit: contain;
   }
   
+  /* ===== LOGO SECTION ===== */
   .logo-section {
 	text-align: center;
 	margin-bottom: 30px;
   }
   
   .logo {
-	width: 150px;
-	margin-bottom: 10px;
-  }
-
-  .filters {
-	display: flex;
-	justify-content: center;
-	gap: 12px;
-	margin: 20px 0;
-  }
-  
-  .filter-tile {
-	background: url('../images/explore.png') center/cover;
-	width: 70px;
-	height: 70px;
-	border-radius: 16px;
-	border: none;
-	color: white;
-	font-family: 'Inknut Antiqua', serif;
-	font-weight: bold;
-	font-size: 12px;
-	position: relative;
-	overflow: hidden;
-	text-shadow: 1px 1px 3px #000;
-  }
-
-  .card-grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 16px;
-	padding: 0 20px;
-  }
-
-  .logo-title {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 12px;
-	margin-bottom: 30px;
-  }
-  
-  .logo-title .logo {
-	width: 60px;
-	height: 60px;
-	object-fit: contain;
+	width: 120px;
+	height: auto;
+	display: block;
+	margin: 0 auto 20px;
   }
   
   .logo-title h1 {
-	font-family: 'Inknut Antiqua', serif;
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 	color: #f4d77b;
-	line-height: 1.2;
+	line-height: 1.3;
+	margin: 0;
   }
   
-  
-  h1 {
-	font-size: 1.5rem;
-	font-weight: bold;
-	color: #f4d77b;
-  }
-  
+  /* ===== BUTTONS ===== */
   .button-group {
 	display: flex;
 	flex-direction: column;
-	gap: 12px;
-	margin-bottom: 30px;
+	gap: 16px;
+	margin: 20px 0;
+	align-items: center;
   }
   
   .btn-outline {
-	display: block;
 	text-align: center;
 	text-decoration: none;
 	padding: 10px 20px;
@@ -110,7 +72,6 @@ body {
 	color: #f4d77b;
 	background: transparent;
 	border-radius: 10px;
-	margin-bottom: 10px;
 	transition: all 0.2s ease;
   }
   
@@ -119,54 +80,30 @@ body {
 	color: #001a33;
   }
   
-/* Base Mobile-First Styling */
-.tile-group {
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
-	margin-top: 20px;
-	margin-bottom: 40px;
+  /* ===== TILE GRID ===== */
+  .tile-group {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 16px;
+	margin: 20px 0 40px;
   }
   
   .tile {
-	width: 100%;
-	height: 160px;
+	position: relative;
+	overflow: hidden;
 	border: 3px solid #f4d77b;
 	border-radius: 14px;
-	overflow: hidden;
-	position: relative;
 	background: #122034;
+	aspect-ratio: 1 / 1.1;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 	transition: transform 0.2s ease;
-	text-align: center;
-  }
-  
-  /* Responsive Layout for Tablet and Up */
-@media (min-width: 600px) {
-	.tile-group {
-	  flex-direction: row;
-	  flex-wrap: wrap;
-	  justify-content: space-between;
-	}
-  
-	.tile {
-	  width: 48%;
-	}
-  }
-
-  /* Responsive Layout for Desktop */
-@media (min-width: 1024px) {
-	.container {
-	  max-width: 800px;
-	}
-  
-	.tile {
-	  height: 200px;
-	}
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
   }
   
   .tile:hover {
-	transform: scale(1.05);
+	transform: scale(1.03);
   }
   
   .tile img {
@@ -176,30 +113,68 @@ body {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	object-position: center;
 	z-index: 1;
-	opacity: 1;
-	margin: 0;
-	display: block;
   }
   
   .tile p {
-	font-family: 'Inknut Antiqua', serif;
-	font-size: 14px;
+	position: relative;
+	z-index: 2;
 	font-weight: 600;
 	color: #f9f5e3;
-	text-align: center;
-	margin: 8px 0;
-	z-index: 2;
-	position: relative;
-	background: rgba(0, 0, 0, 0.5);
-	width: 100%;
-	padding: 6px 0;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 10px;
+	margin: 0;
+	font-family: 'Inknut Antiqua', serif;
+	font-size: 1rem;
 	border-top: 1px solid #f4d77b;
-
   }
   
-
-
+  /* ===== FILTER TILES ===== */
+  .filters {
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+	margin: 20px 0;
+  }
+  
+  .filter-tile {
+	width: 70px;
+	height: 70px;
+	border-radius: 16px;
+	border: none;
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+	text-shadow: 1px 1px 3px #000;
+	background-image: url('../images/explore.svg');
+	background-size: cover;
+	background-position: center;
+  }
+  
+  /* ===== RESPONSIVE BREAKPOINTS ===== */
+  @media (min-width: 600px) {
+	.tile-group {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+  }
+  
+  @media (min-width: 1024px) {
+	.tile-group {
+	  grid-template-columns: repeat(3, 1fr);
+	}
+  
+	.container {
+	  max-width: 1000px;
+	}
+  
+	.button-group {
+	  flex-direction: row;
+	  justify-content: center;
+	}
+  }
+  
+  /* ===== CHARACTER PROFILE PAGE ===== */
   .character-header {
 	display: flex;
 	justify-content: space-between;
@@ -219,6 +194,7 @@ body {
 	width: 100%;
 	border-radius: 18px;
 	border: 2px solid #f4d77b;
+	object-fit: cover;
   }
   
   .character-name {
@@ -259,5 +235,4 @@ body {
 	margin-top: 8px;
 	line-height: 1.4;
   }
-  
   
